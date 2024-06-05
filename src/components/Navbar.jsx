@@ -6,7 +6,7 @@ import {rlogo, menu, close} from '../assets';
 
 const Navbar = () => {
 const [active, setActive] = useState("")
-const[toggel, setToggel]=useState(false)
+const[toggel, setToggel]=useState(true)
 
   return (
     <nav className={'${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black'}>
