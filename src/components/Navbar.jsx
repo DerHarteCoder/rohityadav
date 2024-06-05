@@ -9,8 +9,8 @@ const [active, setActive] = useState("")
 const[toggel, setToggel]=useState(true)
 
   return (
-    <nav className={'${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-black'}>
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+    <nav className={'${styles.paddingX} w-full flex-1 justify-between items-center py-5 fixed top-0 z-20 bg-black'}>
+      <div className='w-full  flex  items-center max-w-7xl mx-auto'>
            <Link 
                 to='/'
                 className='flex items-center gap-2'
