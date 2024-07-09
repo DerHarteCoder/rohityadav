@@ -21,7 +21,7 @@ const projects = [
 const ProjectCards = () => {
   return (
     <>
-    <h1 className='text-center text-6xl font-bold'>Work Experience</h1>
+    <h1 className='text-center text-6xl font-bold mt-10'>Work Experience</h1>
     <div className="flex justify-between mt-10">
       {projects.map((project, index) => (
         <div className="w-96 h-96 bg-black border-white shadow-md rounded-lg p-4" key={index}>
