@@ -38,7 +38,7 @@ const TechCard = ({ name, logo }) => {
 const Tech = () => {
   return (
     <>
-     <h1 className='text-center text-3xl font-bold mt-10 mb-10'>Tech Stack</h1>
+     <h1 className='text-center text-6xl font-bold mt-10 mb-10'>Tech Stack</h1>
     <div className="flex space-x-4 justify-center items-center">
       {techStack.map(tech => (
         <TechCard key={tech.name} name={tech.name} logo={tech.logo} />
