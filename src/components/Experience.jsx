@@ -1,32 +1,38 @@
-import React from 'react'
-import{ VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline-component'
-import { motion } from 'framer-motion'
-import 'react-vertical-timeline-component/style.min.css';
+import React from 'react';
 
-import { styles } from './styles';
-import { experiences } from '../constants';
-// import {SectionWrapper} from "../hoc"
-import { textVariant } from '../utils/motion';
+const projects = [
+  {
+    title: 'Project One',
+    image: 'https://placeimg.com/200/200/tech',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  },
+  {
+    title: 'Project Two',
+    image: 'https://placeimg.com/200/200/tech',
+    description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+  },
+  {
+    title: 'Project Three',
+    image: 'https://placeimg.com/200/200/tech',
+    description: 'Nulla facilisi. Fusce eu elit sed velit dignissim lacinia.',
+  },
+];
 
-
-const Experience = () => {
+const ProjectCards = () => {
   return (
     <>
-    <motion.div variants={textVariant()}>
-    <p className={styles.sectionSubText}>What I have done So far!</p>
-      <h2 className={styles.sectionHeadText}>Work Experience.</h2>
-    </motion.div>
- 
-    
-{/* <div className='mt-20 flex flex-col'>
-     <VerticalTimeline>
-      {experiences.map((experience, index) => (
-        <ExperienceCard key={index} experience={experience}/>
+    <h1 className='text-center text-6xl font-bold'>Work Experience</h1>
+    <div className="flex justify-between mt-10">
+      {projects.map((project, index) => (
+        <div className="w-96 h-96 bg-black border-white shadow-md rounded-lg p-4" key={index}>
+          <img src={project.image} alt={project.title} className="mb-2 rounded-lg" />
+          <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+          <p className="text-sm text-gray-600">{project.description}</p>
+        </div>
       ))}
-     </VerticalTimeline>
-    </div> */}
+    </div>
     </>
-  )
-}
+  );
+};
 
-export default Experience
+export default ProjectCards;
